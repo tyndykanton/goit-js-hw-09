@@ -9,7 +9,7 @@ const refs = {
 }
 
 refs.body.style.backgroundColor = '#f7eff4';
-refs.form.addEventListener('click', onPromiseCreate);
+refs.form.addEventListener('submit', onSubmit);
 
 function createPromise(position, delay) {
   return new Promise((resolve, reject) => {
@@ -25,7 +25,7 @@ function createPromise(position, delay) {
 }
 
 
-function onPromiseCreate(e) {
+function onSubmit(e) {
   e.preventDefault();
 
   let valueDelay = Number(refs.delay.value);
